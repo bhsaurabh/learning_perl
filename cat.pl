@@ -8,8 +8,8 @@ use warnings;
 sub print_file {
   my $file = shift;  # get the filename from the parameters
   open my $fh, $file;
-  while (my $line = <$fh>) {
-    print "$line";
+  while (<$fh>) {
+    print "$_";
   }
 }
 
