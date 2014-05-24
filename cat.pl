@@ -9,14 +9,14 @@ sub print_file {
   my $file = shift;  # get the filename from the parameters
   open my $fh, $file;
   while (<$fh>) {
-    print "$_";
+    print "$_";  # NOTE: $_ is global, changing it here affects cat
   }
 }
 
 sub cat {
   # when a variable is not provided, foreach uses $_
   foreach (@_) {
-    print_file $_;
+    print_file $_;  
   }
 }
 
