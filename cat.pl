@@ -14,8 +14,8 @@ sub print_file {
 }
 
 sub cat {
-  while (my $file = shift @_) {
-    print_file $file;
+  foreach my $file(@_) {
+    print_file($file);
   }
 }
 
