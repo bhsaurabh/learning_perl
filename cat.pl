@@ -14,8 +14,9 @@ sub print_file {
 }
 
 sub cat {
-  foreach my $file(@_) {
-    print_file($file);
+  # when a variable is not provided, foreach uses $_
+  foreach (@_) {
+    print_file $_;
   }
 }
 
