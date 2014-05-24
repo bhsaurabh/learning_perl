@@ -4,6 +4,7 @@
 use strict;
 use warnings;
 
+# definition of a sub-routine should be before it is invoked
 sub print_file {
   my $file = shift;  # get the filename from the parameters
   open my $fh, $file;
