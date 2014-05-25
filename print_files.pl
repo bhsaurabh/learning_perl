@@ -4,6 +4,9 @@ use warnings;
 
 sub display {
   my $file = shift;
+  print "-------------------------------------------\n";
+  print "$file\n";
+  print "-------------------------------------------\n";
   open my $fh, $file;
   while (my $line = <$fh>) {
     print "$line";
