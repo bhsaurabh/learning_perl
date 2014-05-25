@@ -5,8 +5,8 @@ use strict;
 use warnings;
 
 sub print_dir {
-  $dir = shift;
-  @files = glob "$dir/*";
+  my $dir = shift;
+  my @files = glob "$dir/*";
   while (my $file = shift @files) {
     print "$file\n";
   }
