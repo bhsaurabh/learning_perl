@@ -7,6 +7,10 @@ sub display {
   print "-------------------------------------------\n";
   print "$file\n";
   print "-------------------------------------------\n";
+  # check for directory
+  if (-d $file) {
+    print "$file is a directory.\n"
+  }
   open my $fh, $file;
   while (my $line = <$fh>) {
     print "$line";
