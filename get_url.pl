@@ -7,7 +7,9 @@ sub get_url {
   # Ex: Input = http://www.google.com Output = www.google.com
   my $pattern = "http://(.*)";
   for my $url (@_) {
-    print "$url\n";
+    if ($url =~ m/$pattern/) {
+      print "$url => $1\n";
+    }
   }
 }
 
