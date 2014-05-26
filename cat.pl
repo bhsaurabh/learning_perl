@@ -19,7 +19,7 @@ sub print_file {
   if (-d $file) {
     print_dir $file;
   }
-  open my $fh, $file or die "Couldn't open $file\n";
+  open my $fh, $file or die "$0: Couldn't open $file: $!\n";
   while (<$fh>) {
     print "$_";  # NOTE: $_ is global, changing it here affects cat
   }

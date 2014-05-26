@@ -11,7 +11,7 @@ sub display {
   if (-d $file) {
     print "$file is a directory.\n"
   }
-  open my $fh, $file or die "couldn't open $file\n";
+  open my $fh, $file or die "$0: Couldn't open $file: $!\n";
   while (my $line = <$fh>) {
     print "$line";
   }

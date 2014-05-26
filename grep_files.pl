@@ -9,7 +9,7 @@ sub grep_file {
   # Expects a pattern, and a filename as arguments
   my $pattern = shift;
   my $file = shift;
-  open my $fh, $file or die "Couldn't open $file\n";
+  open my $fh, $file or die "$0: Couldn't open $file: $!\n";
 
   while (my $line = <$fh>) {
     if ($line =~ m/$pattern/) {
