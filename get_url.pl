@@ -5,10 +5,10 @@ use warnings;
 sub get_url {
   # Takes in a URL and prints everything after http://
   # Ex: Input = http://www.google.com Output = www.google.com
-  my $pattern = "http://(.*)";
+  my $pattern = "(ftp|http)://(.*)";
   for my $url (@_) {
     if ($url =~ m/$pattern/) {
-      print "$url => $1\n";
+      print "$url => $2\n";
     }
   }
 }
