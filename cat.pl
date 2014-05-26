@@ -7,7 +7,7 @@ use warnings;
 sub print_dir {
   my $dir = shift;
   my @files = glob "$dir/*";
-  while (my $file = shift @files) {
+  for my $file (@files) {
     print "$file\n";
   }
 }
