@@ -13,6 +13,7 @@ sub reverse_list_inplace {
         swap ($_[$i], $_[-$i-1]);
     }
     print "New List: @_\n";
+    return @_;
 }
 
 reverse_list_inplace @ARGV;
